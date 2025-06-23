@@ -88,7 +88,7 @@ with st.sidebar:
 if upload:
     df = pd.read_csv(upload)
 else:
-    df = pd.read_csv("/Users/snehanarayanan/Documents/Netflix Project/netflix_revenue_updated_.csv")
+    df = df = pd.read_csv("netflix_revenue_updated_.csv")
 
 # === Region Columns
 rev_col = f"{region} Streaming Revenue"
