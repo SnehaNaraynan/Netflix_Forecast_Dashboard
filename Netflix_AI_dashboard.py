@@ -8,6 +8,15 @@ import matplotlib.pyplot as plt
 import boto3, json, os
 from dotenv import load_dotenv
 
+
+# === Lightweight Ping Handler ===
+
+query_params = st.experimental_get_query_params()
+if query_params.get("ping") == ["1"]:
+    st.set_page_config(page_title="Ping Page")
+    st.write("✅ Ping received. App is awake.")
+    st.stop()
+
 # === Streamlit Layout & Style ===
 st.set_page_config(layout="wide")
 st.markdown("""
