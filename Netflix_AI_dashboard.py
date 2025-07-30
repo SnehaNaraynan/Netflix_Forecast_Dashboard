@@ -11,10 +11,10 @@ from dotenv import load_dotenv
 
 # === Lightweight Ping Handler ===
 
-query_params = st.experimental_get_query_params()
+query_params = st.query_params
 if query_params.get("ping") == ["1"]:
     st.set_page_config(page_title="Ping Page")
-    st.write("✅ Ping received. App is awake.")
+    st.write(" Ping received. App is awake.")
     st.stop()
 
 # === Streamlit Layout & Style ===
